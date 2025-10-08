@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المساعد الذكي في الأحياء</title>
+  <style>
+    body { font-family: sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+    #chatbot-icon {
+      position: fixed;
+      bottom: 20px; right: 20px;
+      background-color: #3cb371;
+      color: white; border-radius: 50%;
+      width: 60px; height: 60px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 28px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    #chatbox {
+      position: fixed;
+      bottom: 90px; right: 20px;
+      width: 300px; height: 400px;
+      background: white; border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      display: none; flex-direction: column;
+      overflow: hidden;
+    }
+    #messages { flex: 1; padding: 10px; overflow-y: auto; font-size: 14px; }
+    #input-area { display: flex; border-top: 1px solid #ccc; }
+    #user-input { flex: 1; padding: 8px; border: none; outline: none; }
+    button { background-color: #3cb371; color: white; border: none; padding: 8px 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="chatbot-icon">💬</div>
+  <div id="chatbox">
+    <div id="messages"></div>
+    <div id="input-area">
+      <input id="user-input" type="text" placeholder="اكتب سؤالك في الأحياء..." />
+      <button id="send-btn">إرسال</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
